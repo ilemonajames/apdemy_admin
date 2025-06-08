@@ -6,13 +6,13 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA-0I7cYQYlGk_7jwui5fHr8FiixkkqGBg",
-  authDomain: "reactnatively-14c27.firebaseapp.com",
-  projectId: "reactnatively-14c27",
-  storageBucket: "reactnatively-14c27.appspot.com", // Fixed storage bucket URL
-  messagingSenderId: "205672231989",
-  appId: "1:205672231989:web:2ff4c316714fad294a6d7c",
-  measurementId: "G-MMJKRD5WVM"
+   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET, // Fixed storage bucket URL
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASREMENT_ID
 };
 
 // Initialize Firebase
