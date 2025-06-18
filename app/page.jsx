@@ -65,15 +65,15 @@ export default function LogIn() {
   }
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4 ">
       <form 
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-gray-100 p-8 rounded-lg shadow-lg"
+        className="w-full max-w-md bg-white p-8 shadow-lg border border-blue-100 rounded-4xl"
       >
         {/* Logo */}
-        {/* <img src="/logo.png" alt="Logo" className="w-28 h-28 mx-auto mb-4" /> */}
+        <img src="/logo-dark.png" alt="Logo" className="w-28 h-28 mx-auto mb-4 rounded-2xl" />
 
-        <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Welcome Back</h1>
+        <h1 className="text-2xl font-bold text-center text-blue-800 mb-6">Welcome Back</h1>
 
         <input
           type="email"
@@ -81,7 +81,7 @@ export default function LogIn() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full px-4 py-3 rounded-md border border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 mb-4 text-black"
+          className="w-full px-4 py-3 rounded-md border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200 mb-4 text-gray-800 bg-blue-50/30"
         />
 
         <input
@@ -90,14 +90,14 @@ export default function LogIn() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          className="w-full px-4 py-3 rounded-md border border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 mb-6 text-black"
+          className="w-full px-4 py-3 rounded-md border border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-200 mb-6 text-gray-800 bg-blue-50/30"
         />
 
         <button
           type="submit"
           disabled={loading}
           className={`w-full py-3 rounded-md text-white font-semibold transition duration-200 ${
-            loading ? 'bg-blue-300 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
+            loading ? 'bg-blue-300 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'
           }`}
         >
           {loading ? (
